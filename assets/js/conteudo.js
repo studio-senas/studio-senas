@@ -3,7 +3,10 @@
    ========================================================== */
 
 /* WhatsApp: só números, com DDI e DDD. Ex.: '5511999999999' */
-const WHATSAPP = '';
+const WHATSAPP = '5511959103432';
+
+/* E-mail que recebe os formulários do site (via FormSubmit) */
+const EMAIL_FORMULARIO = 'mayarasenarodrigues@gmail.com';
 
 /* ---------- LOGOS DE CLIENTES ----------
    logo: caminho da imagem (ex.: 'assets/img/clientes/marca.png')

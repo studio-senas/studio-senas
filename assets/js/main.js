@@ -324,24 +324,43 @@
 
   const form = $('#contactForm');
   const note = $('#formNote');
-  form.addEventListener('submit', (e) => {
+  const btn = $('#formBtn');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(form));
-    if (!d.nome.trim() || !d.mensagem.trim()) {
-      note.textContent = 'Preencha seu nome e a mensagem.';
+    if (d._honey) return; // robôs
+    if (!d.nome.trim() || !d.contato.trim() || !d.mensagem.trim()) {
+      note.textContent = 'Preencha nome, contato e mensagem.';
       note.className = 'form__note is-error';
       return;
     }
-    const msg = `Olá, May! Meu nome é ${d.nome.trim()}${d.empresa.trim() ? ' (' + d.empresa.trim() + ')' : ''}.\nServiço: ${d.servico}\n\n${d.mensagem.trim()}`;
-    if (!WHATSAPP) {
-      note.textContent = 'Número de WhatsApp ainda não configurado.';
+    btn.disabled = true; btn.textContent = 'Enviando...';
+    note.textContent = ''; note.className = 'form__note';
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/' + EMAIL_FORMULARIO, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          _subject: 'Novo contato pelo site · ' + d.nome.trim(),
+          _template: 'table',
+          Nome: d.nome.trim(),
+          Empresa: d.empresa.trim() || '-',
+          Contato: d.contato.trim(),
+          Servico: d.servico,
+          Mensagem: d.mensagem.trim()
+        })
+      });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || String(out.success) === 'false') throw new Error(out.message || 'erro');
+      track('envio_formulario', { servico: d.servico });
+      form.reset();
+      note.textContent = 'Mensagem enviada! Logo eu respondo.';
+    } catch (err) {
+      note.innerHTML = 'Não consegui enviar agora. Tente de novo ou <a href="' + waURL('Olá, May! Vim pelo site do Studio Senas.') + '" target="_blank" rel="noopener">chame no WhatsApp</a>.';
       note.className = 'form__note is-error';
-      return;
+    } finally {
+      btn.disabled = false; btn.textContent = 'Enviar mensagem';
     }
-    track('envio_formulario', { servico: d.servico });
-    window.open(waURL(msg), '_blank', 'noopener');
-    note.textContent = 'Abrindo o WhatsApp...';
-    note.className = 'form__note';
   });
 
   /* ---------------- Animação de entrada ---------------- */

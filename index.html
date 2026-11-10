@@ -245,10 +245,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="contact__text">
       <span class="label label--light">Contato</span>
       <h2 class="section__title">Vamos contar a <em>sua cena</em>?</h2>
-      <p>Conte um pouco sobre o seu projeto. Respondo pessoalmente, normalmente no mesmo dia útil.</p>
+      <p>Conte um pouco sobre o seu projeto pelo formulário ou chame direto no WhatsApp. Respondo pessoalmente, normalmente no mesmo dia útil.</p>
       <ul class="contact__list">
-        <li><a href="#" data-whatsapp-link>WhatsApp</a></li>
-        <li><a href="mailto:contato@senastudio.com.br">contato@senastudio.com.br</a></li>
+        <li><a href="#" data-whatsapp-link>WhatsApp · (11) 95910-3432</a></li>
         <li><a href="https://instagram.com/studiosenas" target="_blank" rel="noopener">@studiosenas</a></li>
       </ul>
     </div>
@@ -257,6 +256,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label>Nome<input type="text" name="nome" required autocomplete="name"></label>
         <label>Empresa ou marca<input type="text" name="empresa" autocomplete="organization"></label>
       </div>
+      <label>E-mail ou WhatsApp<input type="text" name="contato" required autocomplete="email" placeholder="Para eu te responder"></label>
+      <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off" aria-hidden="true">
       <label>Serviço
         <select name="servico">
           <option>Identidade visual</option>
@@ -266,7 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </select>
       </label>
       <label>Mensagem<textarea name="mensagem" rows="4" required placeholder="Conte sobre o seu projeto"></textarea></label>
-      <button type="submit" class="btn btn--bege btn--full">Enviar pelo WhatsApp</button>
+      <button type="submit" class="btn btn--bege btn--full" id="formBtn">Enviar mensagem</button>
       <p class="form__note" id="formNote" role="status"></p>
     </form>
   </div>

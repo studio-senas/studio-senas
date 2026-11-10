@@ -533,6 +533,9 @@ p { margin: 0; }
 .form .btn { margin-top: 8px; }
 .form__note { font-size: 14px; min-height: 1.4em; color: var(--bege); }
 .form__note.is-error { color: #e9a77d; }
+.form__note a { color: var(--offwhite); }
+.form__honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form .btn:disabled { opacity: .6; cursor: wait; transform: none; }
 @media (max-width: 900px) {
   .contact__inner { grid-template-columns: 1fr; gap: 48px; }
   .form { padding: 28px 22px; }
