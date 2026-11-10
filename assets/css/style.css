@@ -309,6 +309,26 @@ p { margin: 0; }
 .service ul { list-style: none; padding: 0; margin: 26px 0 0; border-top: 1px solid var(--linha); }
 .service li { padding: 11px 0 11px 20px; border-bottom: 1px solid var(--linha); font-size: 15px; position: relative; }
 .service li::before { content: ''; position: absolute; left: 0; top: 50%; width: 7px; height: 7px; margin-top: -3.5px; border-radius: 50%; background: var(--oliva); }
+
+/* cores por serviço */
+.service { border: 0; overflow: hidden; isolation: isolate; color: var(--offwhite); }
+.service > *:not(.service__symbol) { position: relative; z-index: 1; }
+.service--oliva { background: var(--oliva); }
+.service--ferrugem { background: var(--ferrugem); }
+.service--choco { background: var(--choco); }
+.service__symbol {
+  position: absolute; right: -34px; bottom: -40px; height: 230px; width: auto;
+  opacity: .16; transform: rotate(-8deg); transition: transform .8s var(--ease), opacity .5s;
+}
+.service:hover .service__symbol { transform: rotate(4deg) scale(1.06); opacity: .26; }
+.service .service__num { color: var(--bege); }
+.service h3 { color: var(--offwhite); }
+.service p { color: rgba(251, 247, 241, .82); }
+.service ul { border-top-color: rgba(251, 247, 241, .22); }
+.service li { border-bottom-color: rgba(251, 247, 241, .22); }
+.service--oliva li::before, .service--choco li::before { background: var(--bege); }
+.service--ferrugem li::before { background: var(--choco); }
+.service:hover { box-shadow: 0 28px 60px -30px rgba(74, 47, 37, .7); }
 @media (max-width: 960px) { .services { grid-template-columns: 1fr; } }
 
 /* ---------- Cases ---------- */
