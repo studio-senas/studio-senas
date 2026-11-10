@@ -1,16 +1,294 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Studio Senas — em breve</title>
-<style>
-  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;background:#faf8f5;color:#2b2b2b;text-align:center}
-  h1{font-weight:400;letter-spacing:.2em;text-transform:uppercase;font-size:1.6rem;margin:0 0 .5rem}
-  p{font-family:Helvetica,Arial,sans-serif;font-size:.9rem;letter-spacing:.1em;color:#777;margin:0}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Senas · Design que conta a sua cena</title>
+  <meta name="description" content="Studio Senas é o estúdio de design gráfico de May Sena. Identidade visual, social media e materiais gráficos com elegância e propósito.">
+  <meta property="og:title" content="Studio Senas · Design que conta a sua cena">
+  <meta property="og:description" content="Identidade visual, social media e materiais gráficos com elegância e propósito.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div><h1>Studio Senas</h1><p>Site em breve</p></div>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="header" id="topo">
+  <div class="container header__inner">
+    <a href="#inicio" class="header__logo" aria-label="Studio Senas, voltar ao início">
+      <img src="assets/img/logo.png" alt="Studio Senas" width="170" height="59">
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#cases">Cases</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#clientes">Clientes</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato" class="btn btn--oliva nav__cta">Fale comigo</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ BANNER ROTATIVO ============ -->
+<section class="hero" id="inicio" aria-roledescription="carrossel" aria-label="Destaques">
+  <div class="hero__track">
+
+    <article class="slide slide--choco is-active" aria-roledescription="slide" aria-label="1 de 3">
+      <div class="slide__content">
+        <span class="label">Estúdio de design gráfico</span>
+        <h1 class="slide__title">Toda marca tem uma <em>cena</em> para contar.</h1>
+        <p class="slide__text">Identidades visuais, social media e materiais gráficos com elegância, propósito e atenção a cada detalhe.</p>
+        <div class="slide__actions">
+          <a href="#cases" class="btn btn--bege">Ver cases</a>
+          <a href="#contato" class="btn btn--ghost-light">Fale comigo</a>
+        </div>
+      </div>
+      <!-- Troque o painel por uma imagem: <div class="slide__media"><img src="assets/img/sua-foto.jpg" alt=""></div> -->
+      <div class="slide__media slide__media--padrao-ferrugem" aria-hidden="true"></div>
+    </article>
+
+    <article class="slide slide--oliva" aria-roledescription="slide" aria-label="2 de 3">
+      <div class="slide__content">
+        <span class="label">Identidade visual</span>
+        <h2 class="slide__title">Marcas com <em>propósito</em>, do rabisco ao logo.</h2>
+        <p class="slide__text">Cada escolha visual existe para contar a história do seu negócio.</p>
+        <div class="slide__actions">
+          <a href="#servicos" class="btn btn--bege">Conheça os serviços</a>
+        </div>
+      </div>
+      <div class="slide__media slide__media--padrao-bege" aria-hidden="true"></div>
+    </article>
+
+    <article class="slide slide--bege" aria-roledescription="slide" aria-label="3 de 3">
+      <div class="slide__content">
+        <span class="label">Agenda aberta</span>
+        <h2 class="slide__title">Agenda aberta para <em>novos projetos</em>.</h2>
+        <p class="slide__text">Identidade visual · social media · materiais gráficos.</p>
+        <div class="slide__actions">
+          <a href="#contato" class="btn btn--choco">Quero um orçamento</a>
+        </div>
+      </div>
+      <div class="slide__media slide__media--simbolo" aria-hidden="true">
+        <img src="assets/img/simbolo-negativo.png" alt="">
+      </div>
+    </article>
+
+  </div>
+
+  <button class="hero__arrow hero__arrow--prev" aria-label="Slide anterior">
+    <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+  </button>
+  <button class="hero__arrow hero__arrow--next" aria-label="Próximo slide">
+    <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <div class="hero__dots" role="tablist" aria-label="Escolher slide"></div>
+</section>
+
+<!-- ============ LOGOS DE CLIENTES ============ -->
+<section class="logos" id="clientes" aria-label="Clientes">
+  <div class="container">
+    <p class="label label--center">Marcas que confiaram no estúdio</p>
+  </div>
+  <div class="logos__marquee">
+    <div class="logos__track" id="logosTrack"></div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section" id="servicos">
+  <div class="container">
+    <header class="section__head">
+      <span class="label">Serviços</span>
+      <h2 class="section__title">Design que conta <em>a sua cena</em>.</h2>
+      <p class="section__lead">Três frentes, um mesmo cuidado: entender o seu negócio antes de desenhar qualquer coisa.</p>
+    </header>
+
+    <div class="services">
+      <article class="service">
+        <span class="service__num">01</span>
+        <h3>Identidade visual</h3>
+        <p>Logo, paleta, tipografia e manual de marca. Uma base sólida para tudo o que vem depois.</p>
+        <ul>
+          <li>Logo e versões</li>
+          <li>Paleta e tipografia</li>
+          <li>Padrão gráfico</li>
+          <li>Manual de identidade</li>
+        </ul>
+      </article>
+      <article class="service">
+        <span class="service__num">02</span>
+        <h3>Social media</h3>
+        <p>Feed, stories e destaques com a cara da sua marca. Gestão em pacotes sob medida.</p>
+        <ul>
+          <li>Templates de feed e stories</li>
+          <li>Capas de destaques</li>
+          <li>Planejamento de conteúdo</li>
+          <li>Gestão mensal</li>
+        </ul>
+      </article>
+      <article class="service">
+        <span class="service__num">03</span>
+        <h3>Materiais gráficos</h3>
+        <p>Do cartão de visita à embalagem. Peças impressas e digitais prontas para usar.</p>
+        <ul>
+          <li>Cartão, papelaria e envelope</li>
+          <li>Apresentações e propostas</li>
+          <li>Embalagens e etiquetas</li>
+          <li>Banners e peças para eventos</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="section section--bege" id="cases">
+  <div class="container">
+    <header class="section__head section__head--split">
+      <div>
+        <span class="label">Cases</span>
+        <h2 class="section__title">Projetos e <em>bastidores</em>.</h2>
+      </div>
+      <div class="filters" id="caseFilters" role="tablist" aria-label="Filtrar cases"></div>
+    </header>
+    <div class="cases" id="casesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ VÍDEOS ============ -->
+<section class="section section--choco" id="videos">
+  <div class="container">
+    <header class="section__head section__head--split">
+      <div>
+        <span class="label label--light">Vídeos</span>
+        <h2 class="section__title">Do rabisco <em>ao logo</em>.</h2>
+      </div>
+      <p class="section__lead">Processo, bastidores e projetos em movimento.</p>
+    </header>
+    <div class="videos" id="videosGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="section" id="processo">
+  <div class="container">
+    <header class="section__head">
+      <span class="label">Processo</span>
+      <h2 class="section__title">Como a sua <em>cena</em> ganha forma.</h2>
+    </header>
+    <ol class="steps">
+      <li><span>01</span><h3>Conversa</h3><p>Entendo o seu negócio, o seu público e o que a marca precisa dizer.</p></li>
+      <li><span>02</span><h3>Conceito</h3><p>Pesquisa, referências e a ideia que vai guiar o projeto.</p></li>
+      <li><span>03</span><h3>Criação</h3><p>Desenho, ajustes e apresentação com calma, ouvindo você.</p></li>
+      <li><span>04</span><h3>Entrega</h3><p>Arquivos organizados, manual de uso e suporte depois da entrega.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="section section--offwhite" id="depoimentos">
+  <div class="container">
+    <header class="section__head section__head--split">
+      <div>
+        <span class="label">Depoimentos</span>
+        <h2 class="section__title">Quem já viveu <em>essa cena</em>.</h2>
+      </div>
+      <div class="testi-nav">
+        <button class="round-btn" id="testiPrev" aria-label="Depoimento anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="round-btn" id="testiNext" aria-label="Próximo depoimento"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </header>
+    <div class="testi" id="testi">
+      <div class="testi__track" id="testiTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contact" id="contato">
+  <div class="container contact__inner">
+    <div class="contact__text">
+      <span class="label label--light">Contato</span>
+      <h2 class="section__title">Vamos contar a <em>sua cena</em>?</h2>
+      <p>Conte um pouco sobre o seu projeto. Respondo pessoalmente, normalmente no mesmo dia útil.</p>
+      <ul class="contact__list">
+        <li><a href="#" data-whatsapp-link>WhatsApp</a></li>
+        <li><a href="mailto:contato@senastudio.com.br">contato@senastudio.com.br</a></li>
+        <li><a href="https://instagram.com/studiosenas" target="_blank" rel="noopener">@studiosenas</a></li>
+      </ul>
+    </div>
+    <form class="form" id="contactForm" novalidate>
+      <div class="form__row">
+        <label>Nome<input type="text" name="nome" required autocomplete="name"></label>
+        <label>Empresa ou marca<input type="text" name="empresa" autocomplete="organization"></label>
+      </div>
+      <label>Serviço
+        <select name="servico">
+          <option>Identidade visual</option>
+          <option>Social media</option>
+          <option>Materiais gráficos</option>
+          <option>Ainda não sei</option>
+        </select>
+      </label>
+      <label>Mensagem<textarea name="mensagem" rows="4" required placeholder="Conte sobre o seu projeto"></textarea></label>
+      <button type="submit" class="btn btn--bege btn--full">Enviar pelo WhatsApp</button>
+      <p class="form__note" id="formNote" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<div class="pattern-band" aria-hidden="true"></div>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/logo-negativo.png" alt="Studio Senas" width="170" height="59">
+      <p><em>Design que conta a sua cena.</em></p>
+    </div>
+    <nav class="footer__nav" aria-label="Rodapé">
+      <a href="#servicos">Serviços</a>
+      <a href="#cases">Cases</a>
+      <a href="#videos">Vídeos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="footer__info">
+      <a href="https://instagram.com/studiosenas" target="_blank" rel="noopener">@studiosenas</a>
+      <span>senastudio.com.br</span>
+      <span>© <span id="ano">2026</span> Studio Senas · por May Sena</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante -->
+<a href="#" class="float-wa" data-whatsapp-link aria-label="Conversar pelo WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19.1L4 20z"/></svg>
+</a>
+
+<!-- Modal (cases e vídeos) -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__box" id="modalBox">
+    <button class="modal__close" data-close aria-label="Fechar">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="modal__body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/js/conteudo.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
