@@ -310,11 +310,13 @@
   });
 
   /* ---------------- WhatsApp e formulário ---------------- */
+  const track = (event, extra) => { window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({ event }, extra || {})); };
   const waURL = (msg) => `https://wa.me/${WHATSAPP}${msg ? '?text=' + encodeURIComponent(msg) : ''}`;
   $$('[data-whatsapp-link]').forEach((a) => {
     if (WHATSAPP) {
       a.href = waURL('Olá, May! Vim pelo site do Studio Senas.');
       a.target = '_blank'; a.rel = 'noopener';
+      a.addEventListener('click', () => track('clique_whatsapp', { origem: a.classList.contains('float-wa') ? 'botao_flutuante' : 'contato' }));
     } else {
       a.href = '#contato';
     }
@@ -336,6 +338,7 @@
       note.className = 'form__note is-error';
       return;
     }
+    track('envio_formulario', { servico: d.servico });
     window.open(waURL(msg), '_blank', 'noopener');
     note.textContent = 'Abrindo o WhatsApp...';
     note.className = 'form__note';
