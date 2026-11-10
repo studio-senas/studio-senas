@@ -6,7 +6,7 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const esc = (t) => String(t ?? '').replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
 
-  const CATS = { identidade: 'Identidade visual', social: 'Social media', graficos: 'Materiais gráficos' };
+  const CATS = { identidade: 'Identidade visual', social: 'Social media', sites: 'Sites', graficos: 'Impressos' };
   const SYMBOL_BY_COLOR = { oliva: 'simbolo-negativo.png', choco: 'simbolo-negativo.png', ferrugem: 'simbolo-ferrugem.png', bege: 'simbolo.png' };
 
   /* ---------------- Cabeçalho e menu ---------------- */
