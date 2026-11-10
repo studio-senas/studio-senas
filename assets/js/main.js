@@ -325,43 +325,27 @@
   const form = $('#contactForm');
   const note = $('#formNote');
   const btn = $('#formBtn');
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  form.action = 'https://formsubmit.co/' + EMAIL_FORMULARIO;
+  form.addEventListener('submit', (e) => {
     const d = Object.fromEntries(new FormData(form));
-    if (d._honey) return; // robôs
+    if (d._honey) { e.preventDefault(); return; } // robôs
     if (!d.nome.trim() || !d.contato.trim() || !d.mensagem.trim()) {
+      e.preventDefault();
       note.textContent = 'Preencha nome, contato e mensagem.';
       note.className = 'form__note is-error';
       return;
     }
+    form.querySelector('[name="_subject"]').value = 'Novo contato pelo site · ' + d.nome.trim();
+    track('envio_formulario', { servico: d.servico });
     btn.disabled = true; btn.textContent = 'Enviando...';
-    note.textContent = ''; note.className = 'form__note';
-    try {
-      const res = await fetch('https://formsubmit.co/ajax/' + EMAIL_FORMULARIO, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          _subject: 'Novo contato pelo site · ' + d.nome.trim(),
-          _template: 'table',
-          Nome: d.nome.trim(),
-          Empresa: d.empresa.trim() || '-',
-          Contato: d.contato.trim(),
-          Servico: d.servico,
-          Mensagem: d.mensagem.trim()
-        })
-      });
-      const out = await res.json().catch(() => ({}));
-      if (!res.ok || String(out.success) === 'false') throw new Error(out.message || 'erro');
-      track('envio_formulario', { servico: d.servico });
-      form.reset();
-      note.textContent = 'Mensagem enviada! Logo eu respondo.';
-    } catch (err) {
-      note.innerHTML = 'Não consegui enviar agora. Tente de novo ou <a href="' + waURL('Olá, May! Vim pelo site do Studio Senas.') + '" target="_blank" rel="noopener">chame no WhatsApp</a>.';
-      note.className = 'form__note is-error';
-    } finally {
-      btn.disabled = false; btn.textContent = 'Enviar mensagem';
-    }
   });
+  // volta do FormSubmit
+  if (/[?&]enviado=1/.test(location.search)) {
+    note.textContent = 'Mensagem enviada! Logo eu respondo.';
+    note.className = 'form__note';
+    history.replaceState(null, '', location.pathname + '#contato');
+  }
+  window.addEventListener('pageshow', () => { btn.disabled = false; btn.textContent = 'Enviar mensagem'; });
 
   /* ---------------- Animação de entrada ---------------- */
   if (!reduceMotion && 'IntersectionObserver' in window) {
