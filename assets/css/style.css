@@ -419,27 +419,29 @@ p { margin: 0; }
 
 /* ---------- Sobre ---------- */
 .about__inner { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(40px, 7vw, 100px); align-items: center; }
-.about__photo { margin: 0; position: relative; max-width: 400px; justify-self: center; }
-.about__photo img:first-child {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%;
+.about__visual {
+  margin: 0; position: relative; width: 100%; max-width: 400px; justify-self: center;
+  aspect-ratio: 4 / 5; background: var(--oliva);
   border-radius: 200px 200px var(--radius) var(--radius);
+  display: grid; place-items: center;
 }
-.about__photo::before {
+.about__visual::before {
   content: ''; position: absolute; inset: 22px -22px -22px 22px; z-index: -1;
   background: url(../img/padrao-bege.png) center / 90px auto repeat var(--bege);
   border-radius: 200px 200px var(--radius) var(--radius);
 }
-.about__symbol { position: absolute; left: -34px; bottom: 40px; width: 76px; height: auto; }
+.about__visual img { width: 42%; height: auto; transition: transform 1s var(--ease); }
+.about__visual:hover img { transform: rotate(-6deg) scale(1.05); }
 .about__text p { margin-top: 18px; color: var(--texto-suave); max-width: 56ch; }
 .about__text p em { color: var(--ferrugem); font-size: 1.1em; }
 .about__text .section__title { margin-bottom: 10px; }
 .about__facts { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--linha); }
 .about__facts li { padding: 18px 16px 0 0; }
 .about__facts strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 22px; color: var(--choco); }
-.about__facts span { font-size: 14px; color: var(--texto-suave); }
+.about__facts span { display: block; font-size: 14px; line-height: 1.5; color: var(--texto-suave); margin-top: 4px; }
 @media (max-width: 860px) {
   .about__inner { grid-template-columns: 1fr; }
-  .about__photo { max-width: 300px; }
+  .about__visual { max-width: 300px; }
   .about__facts { grid-template-columns: 1fr; }
   .about__facts li { padding: 14px 0; border-bottom: 1px solid var(--linha); }
 }
