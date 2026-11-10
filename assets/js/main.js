@@ -238,6 +238,7 @@
   /* ---------------- Depoimentos ---------------- */
   (function testimonials() {
     const track = $('#testiTrack');
+    if (!track) return;
     const initials = (n) => String(n).replace(/[\[\]]/g, '').split(' ').map((p) => p[0]).slice(0, 2).join('').toUpperCase() || 'SS';
     track.innerHTML = DEPOIMENTOS.map((d) => `
       <figure class="quote">
@@ -342,7 +343,7 @@
 
   /* ---------------- Animação de entrada ---------------- */
   if (!reduceMotion && 'IntersectionObserver' in window) {
-    const els = $$('.section__head, .service, .case, .video, .steps li, .quote, .contact__text, .form');
+    const els = $$('.section__head, .service, .case, .video, .steps li, .quote, .manifesto__inner, .contact__text, .form');
     els.forEach((el) => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });

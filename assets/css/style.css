@@ -481,6 +481,27 @@ p { margin: 0; }
 .testi-nav { display: flex; gap: 10px; }
 @media (max-width: 899px) { .quote { flex-basis: 100%; padding: 38px 28px 32px; } }
 
+/* ---------- Manifesto ---------- */
+.manifesto {
+  position: relative; overflow: hidden; text-align: center;
+  background: var(--bege); padding: clamp(90px, 11vw, 150px) 0;
+}
+.manifesto::before, .manifesto::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: clamp(60px, 12vw, 180px);
+  background: url(../img/padrao-bege.png) center / 90px auto repeat var(--bege);
+  opacity: .9;
+}
+.manifesto::before { left: 0; -webkit-mask-image: linear-gradient(90deg, #000, transparent); mask-image: linear-gradient(90deg, #000, transparent); }
+.manifesto::after { right: 0; -webkit-mask-image: linear-gradient(270deg, #000, transparent); mask-image: linear-gradient(270deg, #000, transparent); }
+.manifesto__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+.manifesto__symbol { width: 52px; height: auto; margin-bottom: 34px; }
+.manifesto__quote {
+  font-family: var(--serif); font-size: clamp(34px, 4.6vw, 62px); line-height: 1.15;
+  color: var(--choco); max-width: 24ch; margin-bottom: 44px; text-wrap: balance;
+}
+.manifesto__quote em { color: var(--ferrugem); }
+@media (max-width: 600px) { .manifesto::before, .manifesto::after { width: 34px; } .manifesto__inner { padding: 0 12px; } }
+
 /* ---------- Contato ---------- */
 .contact { background: var(--choco); color: var(--bege); padding: clamp(80px, 10vw, 130px) 0; }
 .contact__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
