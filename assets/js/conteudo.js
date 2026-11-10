@@ -163,10 +163,10 @@ const CASES = [
    formato: 'vertical' (reels, 9:16) ou 'horizontal' (16:9)
    capa: imagem de capa (opcional) */
 const VIDEOS = [
-  { titulo: 'Podcast Luandre & Lindt', subtitulo: 'Condução', tipo: 'youtube', url: '', formato: 'horizontal', capa: 'assets/img/videos/podcast.jpg' },
-  { titulo: '3 erros na entrevista', subtitulo: 'Participação', tipo: 'youtube', url: '', formato: 'vertical', capa: 'assets/img/videos/participacao-1.jpg' },
-  { titulo: 'Bastidores Luandre', subtitulo: 'Participação', tipo: 'youtube', url: '', formato: 'vertical', capa: 'assets/img/videos/participacao-2.jpg' },
-  { titulo: 'Conexões · manifesto Luandre', subtitulo: 'Edição de vídeo', tipo: 'youtube', url: '', formato: 'horizontal', capa: 'assets/img/videos/manifesto.jpg' }
+  { titulo: 'Do rabisco ao logo', subtitulo: 'Bastidores', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
+  { titulo: 'Manual de marca em 30s', subtitulo: 'Projeto', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
+  { titulo: 'Montando um feed', subtitulo: 'Social media', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
+  { titulo: 'Papelaria na mão', subtitulo: 'Materiais gráficos', tipo: 'youtube', url: '', formato: 'vertical', capa: '' }
 ];
 
 /* ---------- DEPOIMENTOS ----------
