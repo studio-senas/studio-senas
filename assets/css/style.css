@@ -542,6 +542,18 @@ p { margin: 0; }
   .form__row { grid-template-columns: 1fr; }
 }
 
+/* ---------- Card de contato ---------- */
+.contact-card {
+  position: relative; overflow: hidden; display: grid; gap: 14px;
+  background: var(--oliva); border-radius: var(--radius); padding: 48px 44px 44px;
+}
+.contact-card__symbol { width: 54px; height: auto; margin-bottom: 18px; }
+.contact-card__title { font-family: var(--serif); font-size: clamp(28px, 3vw, 38px); line-height: 1.2; color: var(--offwhite); }
+.contact-card__title em { color: var(--bege); }
+.contact-card__text { color: rgba(251, 247, 241, .85); margin-bottom: 18px; max-width: 42ch; }
+.contact-card .btn--ghost-light:hover { background: rgba(251, 247, 241, .1); }
+@media (max-width: 900px) { .contact-card { padding: 36px 24px 28px; } }
+
 /* ---------- Faixa de padrão e rodapé ---------- */
 .pattern-band { height: 120px; background: url(../img/padrao-ferrugem.png) center / 103px auto repeat var(--ferrugem); }
 .footer { background: var(--choco-esc); color: var(--bege); padding: 64px 0 48px; }

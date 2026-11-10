@@ -316,40 +316,15 @@
     if (WHATSAPP) {
       a.href = waURL('Olá, May! Vim pelo site do Studio Senas.');
       a.target = '_blank'; a.rel = 'noopener';
-      a.addEventListener('click', () => track('clique_whatsapp', { origem: a.classList.contains('float-wa') ? 'botao_flutuante' : 'contato' }));
+      a.addEventListener('click', () => track('clique_whatsapp', { origem: a.classList.contains('float-wa') ? 'botao_flutuante' : (a.closest('.contact-card') ? 'card_contato' : 'contato') }));
     } else {
       a.href = '#contato';
     }
   });
 
-  const form = $('#contactForm');
-  const note = $('#formNote');
-  const btn = $('#formBtn');
-  form.action = 'https://formsubmit.co/' + EMAIL_FORMULARIO;
-  form.addEventListener('submit', (e) => {
-    const d = Object.fromEntries(new FormData(form));
-    if (d._honey) { e.preventDefault(); return; } // robôs
-    if (!d.nome.trim() || !d.contato.trim() || !d.mensagem.trim()) {
-      e.preventDefault();
-      note.textContent = 'Preencha nome, contato e mensagem.';
-      note.className = 'form__note is-error';
-      return;
-    }
-    form.querySelector('[name="_subject"]').value = 'Novo contato pelo site · ' + d.nome.trim();
-    track('envio_formulario', { servico: d.servico });
-    btn.disabled = true; btn.textContent = 'Enviando...';
-  });
-  // volta do FormSubmit
-  if (/[?&]enviado=1/.test(location.search)) {
-    note.textContent = 'Mensagem enviada! Logo eu respondo.';
-    note.className = 'form__note';
-    history.replaceState(null, '', location.pathname + '#contato');
-  }
-  window.addEventListener('pageshow', () => { btn.disabled = false; btn.textContent = 'Enviar mensagem'; });
-
   /* ---------------- Animação de entrada ---------------- */
   if (!reduceMotion && 'IntersectionObserver' in window) {
-    const els = $$('.section__head, .service, .case, .video, .steps li, .quote, .manifesto__inner, .contact__text, .form');
+    const els = $$('.section__head, .service, .case, .video, .steps li, .quote, .manifesto__inner, .contact__text, .contact-card');
     els.forEach((el) => el.classList.add('reveal'));
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
