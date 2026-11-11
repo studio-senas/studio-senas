@@ -164,7 +164,7 @@ const CASES = [
    formato: 'vertical' (reels, 9:16) ou 'horizontal' (16:9)
    capa: imagem de capa (opcional) */
 const VIDEOS = [
-  { titulo: 'Do rabisco ao logo', subtitulo: 'Bastidores', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
+  { titulo: 'Do rabisco ao logo · Brasil Partner', subtitulo: 'Bastidores', tipo: 'mp4', url: 'assets/videos/bastidores-brasil-partner.mp4', formato: 'vertical', capa: 'assets/videos/bastidores-brasil-partner-capa.jpg' },
   { titulo: 'Manual de marca em 30s', subtitulo: 'Projeto', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
   { titulo: 'Montando um feed', subtitulo: 'Social media', tipo: 'youtube', url: '', formato: 'vertical', capa: '' },
   { titulo: 'Papelaria na mão', subtitulo: 'Materiais gráficos', tipo: 'youtube', url: '', formato: 'vertical', capa: '' }
