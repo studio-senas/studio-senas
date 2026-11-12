@@ -166,8 +166,7 @@ const CASES = [
 const VIDEOS = [
   { titulo: 'Do rabisco ao logo · Brasil Partner', subtitulo: 'Bastidores', tipo: 'mp4', url: 'assets/videos/bastidores-brasil-partner.mp4', formato: 'vertical', capa: 'assets/videos/bastidores-brasil-partner-capa.jpg' },
   { titulo: 'Manual de marca em 30s · Studio Senas', subtitulo: 'Projeto', tipo: 'mp4', url: 'assets/videos/manual-de-marca-30s.mp4', formato: 'vertical', capa: 'assets/videos/manual-de-marca-30s-capa.jpg' },
-  { titulo: 'Montando um feed · H&CO', subtitulo: 'Social media', tipo: 'mp4', url: 'assets/videos/montando-um-feed-hco.mp4', formato: 'vertical', capa: 'assets/videos/montando-um-feed-hco-capa.jpg' },
-  { titulo: 'Papelaria na mão', subtitulo: 'Materiais gráficos', tipo: 'youtube', url: '', formato: 'vertical', capa: '' }
+  { titulo: 'Montando um feed · H&CO', subtitulo: 'Social media', tipo: 'mp4', url: 'assets/videos/montando-um-feed-hco.mp4', formato: 'vertical', capa: 'assets/videos/montando-um-feed-hco-capa.jpg' }
 ];
 
 /* ---------- DEPOIMENTOS ----------

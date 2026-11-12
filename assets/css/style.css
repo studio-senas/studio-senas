@@ -383,7 +383,7 @@ p { margin: 0; }
 @media (max-width: 600px) { .cases { grid-template-columns: 1fr; } }
 
 /* ---------- Vídeos ---------- */
-.videos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.videos { display: grid; grid-template-columns: repeat(var(--cols, 4), 1fr); gap: 22px; }
 .video { border: 0; background: transparent; padding: 0; text-align: left; color: var(--bege); }
 .video--h { grid-column: span 2; }
 .video__thumb {

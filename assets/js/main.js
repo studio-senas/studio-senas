@@ -217,6 +217,7 @@
           </div>
         </button>`;
     }).join('');
+    grid.style.setProperty('--cols', Math.min(4, VIDEOS.length));
 
     grid.addEventListener('click', (e) => {
       const el = e.target.closest('.video');
