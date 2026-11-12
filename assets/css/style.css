@@ -653,3 +653,6 @@ p { margin: 0; }
 #processo .section__head { margin-bottom: 32px; max-width: none; }
 #processo .steps li { padding-top: 26px; }
 #processo .steps h3 { margin: 6px 0 8px; }
+
+/* ---------- Sobre: menos espaço embaixo ---------- */
+#sobre { padding-bottom: clamp(24px, 3vw, 40px); }
