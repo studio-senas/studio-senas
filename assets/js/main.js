@@ -218,6 +218,10 @@
         </button>`;
     }).join('');
     grid.style.setProperty('--cols', Math.min(4, VIDEOS.length));
+    if (VIDEOS.length > 1) {
+      grid.classList.add('videos--feat');
+      grid.firstElementChild.classList.add('video--feat');
+    }
 
     grid.addEventListener('click', (e) => {
       const el = e.target.closest('.video');

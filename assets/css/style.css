@@ -656,3 +656,23 @@ p { margin: 0; }
 
 /* ---------- Sobre: menos espaço embaixo ---------- */
 #sobre { padding-bottom: clamp(24px, 3vw, 40px); }
+
+/* ---------- Vídeos: primeiro em destaque, demais em lista ao lado ---------- */
+.videos.videos--feat {
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  grid-template-rows: none; grid-auto-flow: row; gap: 24px 48px;
+  overflow: visible; align-items: center;
+}
+.videos--feat .video--feat { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+.videos--feat .video--feat .video__info h3 { font-size: 26px; }
+.videos--feat .video:not(.video--feat) {
+  grid-column: 2; display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 24px;
+}
+.videos--feat .video:not(.video--feat) .video__info { padding-top: 0; }
+.videos--feat .video:not(.video--feat) .video__play { width: 44px; height: 44px; }
+.videos--feat .video:not(.video--feat) .video__play svg { width: 16px; height: 16px; margin-left: 3px; }
+@media (max-width: 760px) {
+  .videos.videos--feat { grid-template-columns: 1fr; gap: 18px; }
+  .videos--feat .video--feat { grid-row: auto; max-width: 360px; }
+  .videos--feat .video:not(.video--feat) { grid-column: 1; grid-template-columns: 96px 1fr; gap: 18px; }
+}
