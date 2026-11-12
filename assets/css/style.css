@@ -647,3 +647,9 @@ p { margin: 0; }
 /* ---------- Animação de entrada ---------- */
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.is-in { opacity: 1; transform: none; }
+
+/* ---------- Processo: versão mais compacta ---------- */
+#processo { padding: clamp(48px, 6vw, 80px) 0; }
+#processo .section__head { margin-bottom: 32px; max-width: none; }
+#processo .steps li { padding-top: 26px; }
+#processo .steps h3 { margin: 6px 0 8px; }
