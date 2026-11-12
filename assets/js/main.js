@@ -221,6 +221,14 @@
     if (VIDEOS.length > 1) {
       grid.classList.add('videos--feat');
       grid.firstElementChild.classList.add('video--feat');
+      // prévia silenciosa em loop no destaque
+      const f = VIDEOS[0], th = grid.firstElementChild.querySelector('.video__thumb');
+      if (f.tipo === 'mp4' && f.url && th) {
+        const pv = document.createElement('video');
+        Object.assign(pv, { src: f.url, poster: f.capa || '', muted: true, loop: true, autoplay: true, playsInline: true, preload: 'metadata' });
+        pv.setAttribute('muted', ''); pv.setAttribute('playsinline', ''); pv.setAttribute('aria-hidden', 'true');
+        const img = th.querySelector('img'); if (img) img.replaceWith(pv); else th.prepend(pv);
+      }
     }
 
     grid.addEventListener('click', (e) => {

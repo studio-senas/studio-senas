@@ -657,22 +657,21 @@ p { margin: 0; }
 /* ---------- Sobre: menos espaço embaixo ---------- */
 #sobre { padding-bottom: clamp(24px, 3vw, 40px); }
 
-/* ---------- Vídeos: primeiro em destaque, demais em lista ao lado ---------- */
+/* ---------- Vídeos: manifesto em destaque no topo, demais em 3 colunas ---------- */
 .videos.videos--feat {
-  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
-  grid-template-rows: none; grid-auto-flow: row; gap: 24px 48px;
-  overflow: visible; align-items: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none;
+  grid-auto-flow: row; grid-auto-columns: auto; gap: 40px 22px; overflow: visible; padding-bottom: 0;
 }
-.videos--feat .video--feat { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+.videos--feat .video { grid-column: auto; }
+.videos--feat .video--feat { grid-column: 1 / -1; }
+.videos--feat .video--feat .video__thumb { aspect-ratio: 2.2 / 1; }
+.videos--feat .video--feat .video__thumb video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .8s var(--ease); }
+.videos--feat .video--feat:hover .video__thumb video { transform: scale(1.03); }
 .videos--feat .video--feat .video__info h3 { font-size: 26px; }
-.videos--feat .video:not(.video--feat) {
-  grid-column: 2; display: grid; grid-template-columns: 130px 1fr; align-items: center; gap: 24px;
-}
-.videos--feat .video:not(.video--feat) .video__info { padding-top: 0; }
-.videos--feat .video:not(.video--feat) .video__play { width: 44px; height: 44px; }
-.videos--feat .video:not(.video--feat) .video__play svg { width: 16px; height: 16px; margin-left: 3px; }
+.videos--feat .video:not(.video--feat) .video__thumb { aspect-ratio: 3 / 2; }
+.videos--feat .video:not(.video--feat) .video__play { width: 56px; height: 56px; }
+.videos--feat .video:not(.video--feat) .video__play svg { width: 20px; height: 20px; }
 @media (max-width: 760px) {
-  .videos.videos--feat { grid-template-columns: 1fr; gap: 18px; }
-  .videos--feat .video--feat { grid-row: auto; max-width: 360px; }
-  .videos--feat .video:not(.video--feat) { grid-column: 1; grid-template-columns: 96px 1fr; gap: 18px; }
+  .videos.videos--feat { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .videos--feat .video--feat .video__thumb { aspect-ratio: 16 / 9; }
 }

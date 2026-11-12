@@ -164,7 +164,7 @@ const CASES = [
    formato: 'vertical' (reels, 9:16) ou 'horizontal' (16:9)
    capa: imagem de capa (opcional) */
 const VIDEOS = [
-  { titulo: 'Manifesto · Studio Senas', subtitulo: 'Manifesto', tipo: 'mp4', url: 'assets/videos/manifesto-studio-senas.mp4', formato: 'vertical', capa: 'assets/videos/manifesto-studio-senas-capa.jpg' },
+  { titulo: 'Manifesto · Studio Senas', subtitulo: 'Manifesto', tipo: 'mp4', url: 'assets/videos/manifesto-studio-senas-16x9.mp4', formato: 'horizontal', capa: 'assets/videos/manifesto-studio-senas-16x9-capa.jpg' },
   { titulo: 'Do rabisco ao logo · Brasil Partner', subtitulo: 'Bastidores', tipo: 'mp4', url: 'assets/videos/bastidores-brasil-partner.mp4', formato: 'vertical', capa: 'assets/videos/bastidores-brasil-partner-capa.jpg' },
   { titulo: 'Manual de marca em 30s · Studio Senas', subtitulo: 'Projeto', tipo: 'mp4', url: 'assets/videos/manual-de-marca-30s.mp4', formato: 'vertical', capa: 'assets/videos/manual-de-marca-30s-capa.jpg' },
   { titulo: 'Montando um feed · H&CO', subtitulo: 'Social media', tipo: 'mp4', url: 'assets/videos/montando-um-feed-hco.mp4', formato: 'vertical', capa: 'assets/videos/montando-um-feed-hco-capa.jpg' }
