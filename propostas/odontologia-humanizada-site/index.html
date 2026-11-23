@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prévia do site · Odontologia Humanizada</title>
+<style>:root{color-scheme:light}body{margin:0;background:#fff;overflow-x:clip}</style>
+</head><body>
+<div style="background:#22343A;color:#fff;font:500 13px/1.4 Inter,sans-serif;text-align:center;padding:10px 16px">Prévia de proposta criada pelo <b>Studio Senas</b> · não é o site oficial da clínica</div>
+<!-- ===== Odontologia Humanizada · Dra. Antonelia Guedes — proposta Studio Senas =====
+     Trocar: img/logo.png, img/dra-antonelia.jpg, img/sousmile.jpg e os [CAMPOS] -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" rel="stylesheet">
+
+<style>
+.oh{--teal:#3F6F7D;--teal-d:#2C5561;--teal-l:#EEF4F5;--gold:#C2A36B;--ink:#1F2D32;--mute:#5E6E73;--line:#E6ECEE;
+  font-family:'Inter',sans-serif;color:var(--ink);max-width:1240px;margin:0 auto;padding:24px;box-sizing:border-box}
+.oh *{box-sizing:border-box}
+.oh a{text-decoration:none;color:inherit}
+.oh em{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--gold)}
+/* NAV */
+.oh-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.oh-pills{display:flex;gap:8px;flex-wrap:wrap}
+.oh-pill{font-size:14px;padding:12px 18px;border-radius:999px;background:var(--teal-l);transition:.2s}
+.oh-pill:hover{background:#dde9ec}
+.oh-brand{display:flex;align-items:center;gap:10px;padding:6px 18px 6px 6px;border-radius:999px;background:var(--teal-l);font-weight:600;font-size:14px}
+.oh-brand img{width:40px;height:40px;border-radius:50%;background:#fff;object-fit:contain}
+.oh-cta{background:var(--teal);color:#fff!important;font-weight:600;font-size:14px;padding:13px 22px;border-radius:999px}
+.oh-cta:hover{background:var(--teal-d)}
+/* HERO */
+.oh-hero{position:relative;border-radius:32px;background:var(--teal);overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.1fr .9fr}
+.oh-hero-txt{padding:72px 56px;color:#fff;display:flex;flex-direction:column;gap:24px;justify-content:center;position:relative;z-index:2}
+.oh-tag{align-self:flex-start;font-size:12px;font-weight:500;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25)}
+.oh-hero h1{margin:0;font-size:clamp(40px,4.6vw,62px);line-height:1.05;font-weight:500;letter-spacing:-.02em}
+.oh-hero p{margin:0;font-size:17px;line-height:1.65;color:#DCE8EA;max-width:460px}
+.oh-btns{display:flex;gap:12px;flex-wrap:wrap}
+.oh-btn{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:8px 20px 8px 8px;border-radius:999px;min-height:48px}
+.oh-btn i{width:32px;height:32px;border-radius:50%;display:grid;place-items:center}
+.oh .oh-btn--w{background:#fff;color:var(--ink)}.oh-btn--w i{background:var(--teal);color:#fff}
+.oh-btn--o{border:1px solid rgba(255,255,255,.45);color:#fff}.oh-btn--o i{background:rgba(255,255,255,.18)}
+.oh-hero-img{position:relative}
+.oh-hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.oh-glass{position:absolute;z-index:3;background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-radius:20px;padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.oh-glass small{display:block;font-size:11px;color:var(--mute);margin-bottom:4px}
+.oh-glass b{font-size:15px;font-weight:600}
+.oh-g1{top:28px;right:28px;max-width:210px}
+.oh-g2{bottom:28px;right:28px;display:flex;align-items:center;gap:12px}
+.oh-g2 span{width:40px;height:40px;border-radius:50%;background:var(--teal);display:grid;place-items:center;color:#fff}
+/* intro */
+.oh-intro{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:28px 8px 0;font-size:15px;color:var(--mute)}
+.oh-intro strong{color:var(--ink);font-weight:500}
+/* ESPECIALIDADES (bento) */
+.oh-sec{padding:110px 0 0}
+.oh-h2{margin:0;font-size:clamp(32px,3.6vw,48px);line-height:1.1;font-weight:500;letter-spacing:-.02em}
+.oh-center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;margin-bottom:56px}
+.oh-ghost{font-size:13px;padding:10px 18px;border:1px solid var(--line);border-radius:999px}
+.oh-bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:150px;gap:14px}
+.oh-tile{background:var(--teal-l);border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;color:var(--teal-d);transition:.25s}
+.oh-tile:hover{transform:translateY(-4px);background:#E2EDF0}
+.oh-tile b{font-size:16px;font-weight:500;color:var(--ink)}
+.oh-tile p{margin:0;font-size:13px;line-height:1.5;color:var(--mute)}
+.oh-tile--big{grid-row:span 2;background:var(--teal);color:#fff}
+.oh-tile--big b{color:#fff;font-size:24px}.oh-tile--big p{color:#DCE8EA;font-size:14px}
+.oh-tile--big:hover{background:var(--teal-d)}
+.oh-tile--wide{grid-column:span 2}
+/* SOU SMILE + diferenciais */
+.oh-split-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.oh-split-head p{margin:0;max-width:380px;font-size:15px;line-height:1.6;color:var(--mute)}
+.oh-split{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.oh-photo{position:relative;border-radius:24px;overflow:hidden;min-height:420px;background:var(--teal-l)}
+.oh-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.oh-photo .oh-glass{left:20px;bottom:20px}
+.oh-list{display:flex;flex-direction:column;gap:12px}
+.oh-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 24px;border:1px solid var(--line);border-radius:20px;transition:.2s}
+.oh-row:hover{border-color:var(--teal)}
+.oh-row b{font-size:17px;font-weight:500;display:block}
+.oh-row p{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--mute)}
+.oh-row i{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-style:normal}
+.oh .oh-row--on{background:var(--teal);border-color:var(--teal);color:#fff}
+.oh-row--on p{color:#DCE8EA}.oh-row--on i{background:#fff;color:var(--teal);border:0}
+/* CONTATO */
+.oh-contact{margin-top:110px;border-radius:32px;background:var(--teal-l);padding:56px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.oh-info{display:grid;gap:12px}
+.oh-info div{background:#fff;border-radius:18px;padding:18px 20px;font-size:14px;line-height:1.5}
+.oh-info small{display:block;color:var(--mute);font-size:12px;margin-bottom:2px}
+.oh-foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:28px 8px 8px;font-size:13px;color:var(--mute)}
+.oh-bento{grid-auto-flow:dense}
+/* KIDS + TEA */
+.oh-duo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.oh-card{border-radius:28px;padding:44px;display:flex;flex-direction:column;gap:18px;min-height:420px}
+.oh-card--kids{background:#FBF4E8}
+.oh-card--tea{background:var(--teal-d);color:#fff}
+.oh-card.oh-card--tea p,.oh-card.oh-card--tea li{color:#DCE8EA}
+.oh-card h3{margin:0;font-size:30px;line-height:1.15;font-weight:500;letter-spacing:-.01em}
+.oh-card p{margin:0;font-size:15px;line-height:1.65;color:var(--mute)}
+.oh-card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15px}
+.oh-card li{display:flex;gap:10px;align-items:flex-start}
+.oh-card li:before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--gold)}
+.oh-card .oh-img{margin-top:auto;border-radius:18px;height:180px;background:rgba(0,0,0,.06) center/cover no-repeat;display:grid;place-items:center;font-size:12px;color:var(--mute)}
+.oh-card--tea .oh-img{background-color:rgba(255,255,255,.1);color:#DCE8EA}
+/* ESTÉTICA antes/depois */
+.oh-est{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center}
+.oh-ba{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.oh-ba{grid-template-rows:260px 260px}
+.oh-ba-tall{grid-row:span 2}
+.oh-ba div{position:relative;border-radius:22px;background:var(--teal-l) center/cover no-repeat;display:grid;place-items:center;font-size:12px;color:var(--mute)}
+.oh-ba span{position:absolute;top:14px;left:14px;background:#fff;font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;color:var(--ink)}
+.oh-chips{display:flex;flex-wrap:wrap;gap:8px}
+.oh-chips span{font-size:13px;padding:9px 14px;border-radius:999px;border:1px solid var(--line)}
+.oh-tile--photo{position:relative;overflow:hidden;background:url(img/ortodontia.jpg) center 35%/cover}
+.oh-tile--photo:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(44,85,97,.15),rgba(44,85,97,.85))}
+.oh-tile--photo>*{position:relative}
+.oh-tile--photo:hover{background:url(img/ortodontia.jpg) center 35%/cover}
+/* SOBRE */
+.oh-about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.oh-about .oh-photo{min-height:520px}
+.oh-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.oh-stats div{background:var(--teal-l);border-radius:18px;padding:18px}
+.oh-stats b{display:block;font-size:22px;font-weight:500;color:var(--teal-d)}
+.oh-stats small{font-size:12px;color:var(--mute)}
+/* MÍDIA */
+.oh-media{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding:28px 32px;border:1px solid var(--line);border-radius:24px}
+.oh-media small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.oh-media div{display:flex;flex-wrap:wrap;gap:12px}
+.oh-media a{font-size:14px;font-weight:500;padding:12px 18px;border-radius:999px;background:var(--teal-l)}
+/* DEPOIMENTOS */
+.oh-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.oh-quote{margin:0;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.oh-quote blockquote{margin:0;font-size:16px;line-height:1.6}
+.oh-quote figcaption{font-size:13px;color:var(--mute)}
+.oh-stars{color:var(--gold);letter-spacing:2px}
+/* FAQ */
+.oh-faq{display:grid;gap:10px;max-width:860px;margin:0 auto}
+.oh-faq details{border:1px solid var(--line);border-radius:18px;padding:0 24px}
+.oh-faq summary{cursor:pointer;list-style:none;padding:22px 0;font-size:16px;font-weight:500;display:flex;justify-content:space-between;gap:16px}
+.oh-faq summary::-webkit-details-marker{display:none}
+.oh-faq summary:after{content:"+";font-size:22px;color:var(--teal)}
+.oh-faq details[open] summary:after{content:"–"}
+.oh-faq p{margin:0 0 22px;font-size:15px;line-height:1.65;color:var(--mute)}
+@media(max-width:900px){
+  .oh-duo,.oh-est,.oh-about,.oh-quotes{grid-template-columns:1fr}
+  .oh-card{padding:28px;min-height:0}
+  .oh-about .oh-photo{min-height:420px}
+}
+/* MOBILE */
+@media(max-width:900px){
+  .oh-hero,.oh-split,.oh-contact{grid-template-columns:1fr}
+  .oh-hero-txt{padding:48px 28px}
+  .oh-hero-img{min-height:420px}
+  .oh-bento{grid-template-columns:1fr 1fr}
+  .oh-tile--wide{grid-column:span 2}
+  .oh-contact{padding:32px 24px}
+  .oh-pills{display:none}
+}
+</style>
+
+<div class="oh">
+
+  <!-- NAV -->
+  <nav class="oh-nav" aria-label="Principal">
+    <div class="oh-pills">
+      <a class="oh-pill" href="#oh-sobre">Sobre</a>
+      <a class="oh-pill" href="#oh-esp">Especialidades</a>
+      <a class="oh-pill" href="#oh-cuidado">Infantil & TEA</a>
+      <a class="oh-pill" href="#oh-estetica">Estética</a>
+      <a class="oh-pill" href="#oh-sousmile">Sou Smile</a>
+    </div>
+    <a class="oh-brand" href="#"><img src="img/logo.png" alt="">Odontologia Humanizada</a>
+    <a class="oh-cta" href="https://linkme.bio/draantoneliaguedes">Agendar avaliação</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="oh-hero">
+    <div class="oh-hero-txt">
+      <span class="oh-tag">Dra. Antonelia Guedes · Taboão da Serra</span>
+      <h1>Odontologia que começa pela <em>escuta.</em></h1>
+      <p>Tratamentos com calma, técnica e acolhimento — para adultos, crianças e pacientes atípicos.</p>
+      <div class="oh-btns">
+        <a class="oh-btn oh-btn--w" href="https://linkme.bio/draantoneliaguedes"><i aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></i>Agendar avaliação</a>
+        <a class="oh-btn oh-btn--o" href="#oh-sousmile"><i aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg></i>Conheça a Sou Smile</a>
+      </div>
+    </div>
+    <div class="oh-hero-img">
+      <img src="img/estetica-3.jpg" alt="Mulher sorrindo de olhos fechados" style="object-position:center 70%">
+      <div class="oh-glass oh-g1"><small>Clínica parceira</small><b>Sou Smile · alinhadores invisíveis</b></div>
+      <div class="oh-glass oh-g2"><span aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></span>
+        <div><small>Responsável técnica</small><b>CRO 85093</b></div></div>
+    </div>
+  </section>
+
+  <div class="oh-intro">
+    <p><strong>Antes de tratar,</strong> precisamos entender você.</p>
+    <p>Sedação com óxido nitroso para quem tem medo de dentista.</p>
+  </div>
+
+  <!-- ESPECIALIDADES -->
+  <section class="oh-sec" id="oh-esp">
+    <div class="oh-center">
+      <h2 class="oh-h2">Cuidado completo,<br><em>em um só lugar.</em></h2>
+      <a class="oh-ghost" href="https://linkme.bio/draantoneliaguedes">Agendar consulta</a>
+    </div>
+    <div class="oh-bento">
+      <a class="oh-tile oh-tile--big oh-tile--photo" href="#oh-sousmile">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 9c0-3 3-4 8-4s8 1 8 4-2 9-4 9-2-4-4-4-2 4-4 4-4-6-4-9z"/></svg>
+        <div><b>Ortodontia</b><p>Aparelho fixo e alinhadores invisíveis Sou Smile.</p></div>
+      </a>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg><b>Clínico geral e profilaxia</b></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg><b>Clareamento dental</b></div>
+      <div class="oh-tile oh-tile--wide"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 3c4 0 7 3 7 8s-3 10-7 10-7-5-7-10 3-8 7-8z"/><path d="M9 14c1.5 1.5 4.5 1.5 6 0"/></svg><div><b>Harmonização orofacial</b><p>Refinamento com naturalidade, respeitando seus traços.</p></div></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M8 7l4-4 4 4"/></svg><b>Endodontia</b></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M9 3h6v6l-3 12-3-12z"/></svg><b>Implantes</b></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 12h16M6 8h12M8 16h8"/></svg><b>Prótese</b></div>
+      <div class="oh-tile oh-tile--wide"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21c1-4 4-6 7-6s6 2 7 6"/></svg><div><b>Odontopediatria</b><p>Consultório lúdico e atendimento leve para os pequenos.</p></div></div>
+      <div class="oh-tile oh-tile--wide"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 20 20 4M14 4h6v6"/></svg><div><b>Cirurgia bucomaxilofacial</b><p>Extrações e procedimentos cirúrgicos com segurança.</p></div></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg><b>Laserterapia</b></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"/></svg><b>Exame de saliva</b></div>
+      <div class="oh-tile "><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 14c2-2 4 2 6 0s4-4 6-2 4 2 4 2"/><path d="M4 9c2-2 4 2 6 0s4-4 6-2 4 2 4 2"/></svg><b>Sedação com óxido nitroso</b></div>
+    </div>
+  </section>
+
+  <!-- SOU SMILE + DIFERENCIAIS -->
+  <section class="oh-sec" id="oh-sousmile">
+    <div class="oh-split-head">
+      <h2 class="oh-h2">Alinhar os dentes não é<br>só deixá-los <em>retos.</em></h2>
+      <p>Clínica parceira Sou Smile, com acompanhamento próximo da Dra. Antonelia em cada etapa do tratamento.</p>
+    </div>
+    <div class="oh-split">
+      <div class="oh-photo">
+        <img src="img/sousmile.jpg" style="object-position:center 20%" alt="Alinhador invisível Sou Smile">
+        <div class="oh-glass"><small>Planejamento digital</small><b>Veja o resultado antes de começar</b></div>
+      </div>
+      <div class="oh-list">
+        <a class="oh-row oh-row--on" href="https://linkme.bio/draantoneliaguedes"><div><b>Alinhadores invisíveis Sou Smile</b><p>Discretos, removíveis e confortáveis.</p></div><i aria-hidden="true">↗</i></a>
+        <a class="oh-row" href="https://linkme.bio/draantoneliaguedes"><div><b>Sedação com óxido nitroso</b><p>Mais tranquilidade durante o atendimento.</p></div><i aria-hidden="true">↗</i></a>
+        <a class="oh-row" href="https://linkme.bio/draantoneliaguedes"><div><b>Pacientes atípicos e TEA</b><p>Acolhimento que vai além da técnica.</p></div><i aria-hidden="true">↗</i></a>
+        <a class="oh-row" href="https://linkme.bio/draantoneliaguedes"><div><b>Exame de saliva</b><p>Prevenção personalizada para a sua boca.</p></div><i aria-hidden="true">↗</i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE A DRA -->
+  <section class="oh-sec" id="oh-sobre">
+    <div class="oh-about">
+      <div class="oh-photo"><img src="img/dra-antonelia.jpg" alt="Dra. Antonelia Guedes"></div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <span class="oh-ghost" style="align-self:flex-start">Quem cuida de você</span>
+        <h2 class="oh-h2">A odontologia evoluiu, mas nada substitui o <em>básico bem feito.</em></h2>
+        <p style="margin:0;font-size:16px;line-height:1.75;color:var(--mute)">A Dra. Antonelia Guedes acredita que cada sorriso guarda uma história. Por isso, todo tratamento começa com uma conversa — entendendo seus receios, sua rotina e o que você espera do resultado.</p>
+        <p style="margin:0;font-size:15px;line-height:1.75;color:var(--mute)">[MINI BIO: formação, pós-graduações, anos de experiência]</p>
+        <div class="oh-stats">
+          <div><b>CRO 85093</b><small>Responsável técnica</small></div>
+          <div><b>[XX] anos</b><small>de experiência</small></div>
+          <div><b>[XX] mil</b><small>sorrisos atendidos</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KIDS + TEA -->
+  <section class="oh-sec" id="oh-cuidado">
+    <div class="oh-center">
+      <h2 class="oh-h2">Um consultório pensado<br>para <em>todas as pessoas.</em></h2>
+    </div>
+    <div class="oh-duo">
+      <div class="oh-card oh-card--kids">
+        <h3>Odontopediatria com leveza</h3>
+        <p>Um espaço lúdico, cheio de cor, para a criança se sentir à vontade desde a primeira consulta.</p>
+        <ul>
+          <li>Primeira consulta de adaptação, sem pressa</li>
+          <li>Prevenção, flúor e selantes</li>
+          <li>Sedação com óxido nitroso quando indicada</li>
+          <li>Orientação para os pais sobre higiene e alimentação</li>
+        </ul>
+        <div class="oh-img" style="background-image:url(img/consultorio-infantil.jpg);height:240px;background-position:center 30%" role="img" aria-label="Criança sorrindo na cadeira do dentista"></div>
+      </div>
+      <div class="oh-card oh-card--tea">
+        <h3>Atendimento a pacientes atípicos e TEA</h3>
+        <p>Atender pacientes atípicos exige muito mais do que técnica: exige tempo, escuta e preparo. A Dra. Antonelia se atualiza constantemente em congressos sobre o Transtorno do Espectro Autista.</p>
+        <ul>
+          <li>Consultas com tempo estendido e ambiente previsível</li>
+          <li>Dessensibilização gradual ao consultório</li>
+          <li>Comunicação adaptada com a família</li>
+        </ul>
+        <div class="oh-img" style="background-image:url(img/tea.jpg);height:240px;background-position:center 40%" role="img" aria-label="Criança sorrindo com óculos de proteção no consultório"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTÉTICA -->
+  <section class="oh-sec" id="oh-estetica">
+    <div class="oh-est">
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <h2 class="oh-h2">Refinamento com <em>naturalidade.</em></h2>
+        <p style="margin:0;font-size:16px;line-height:1.7;color:var(--mute)">Estética do sorriso e da face que valoriza quem você já é — sem exageros, com planejamento e segurança.</p>
+        <div class="oh-chips">
+          <span>Harmonização orofacial</span><span>Clareamento dental</span><span>Facetas e restaurações estéticas</span><span>Alinhadores Sou Smile</span><span>Reabilitação com implantes</span>
+        </div>
+        <a class="oh-cta" style="align-self:flex-start" href="https://linkme.bio/draantoneliaguedes">Quero uma avaliação estética</a>
+      </div>
+      <div class="oh-ba">
+        <div class="oh-ba-tall" style="background-image:url(img/estetica-1.jpg)" role="img" aria-label="Sorriso com espelho odontológico"></div>
+        <div class="oh-ba-tall" style="background-image:url(img/estetica-2.jpg)" role="img" aria-label="Sorriso natural"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÍDIA -->
+  <section class="oh-sec">
+    <div class="oh-media">
+      <small>Dra. Antonelia na mídia</small>
+      <div>
+        <a href="https://www.badolytv.com">Badoly TV</a>
+        <a href="#">Podcast Jogo dos Negócios</a>
+        <a href="#">Congresso TEA · Taboão da Serra</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="oh-sec">
+    <div class="oh-split-head">
+      <h2 class="oh-h2">Frases que deixam a dentista<br><em>sorrindo à toa.</em></h2>
+      <p>Avaliações reais de pacientes no Google.</p>
+    </div>
+    <div class="oh-quotes">
+      <figure class="oh-quote"><span class="oh-stars" aria-label="5 estrelas">★★★★★</span><blockquote>[DEPOIMENTO 1]</blockquote><figcaption>[NOME]</figcaption></figure>
+      <figure class="oh-quote"><span class="oh-stars" aria-label="5 estrelas">★★★★★</span><blockquote>[DEPOIMENTO 2]</blockquote><figcaption>[NOME]</figcaption></figure>
+      <figure class="oh-quote"><span class="oh-stars" aria-label="5 estrelas">★★★★★</span><blockquote>[DEPOIMENTO 3]</blockquote><figcaption>[NOME]</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="oh-sec">
+    <div class="oh-center"><h2 class="oh-h2">Dúvidas <em>frequentes</em></h2></div>
+    <div class="oh-faq">
+      <details><summary>Tenho muito medo de dentista. Vocês podem me ajudar?</summary><p>Sim. O atendimento é feito com calma e explicação em cada etapa e, quando indicado, usamos sedação com óxido nitroso para deixar você mais tranquilo.</p></details>
+      <details><summary>Com que idade devo levar meu filho ao dentista?</summary><p>O ideal é a primeira consulta logo após o nascimento dos primeiros dentes. Assim a criança se acostuma com o consultório de forma leve.</p></details>
+      <details><summary>Como funciona o tratamento com Sou Smile?</summary><p>Começa com uma avaliação e escaneamento. Depois você recebe o planejamento digital, os alinhadores e faz consultas periódicas de acompanhamento com a Dra. Antonelia.</p></details>
+      <details><summary>O que é o exame de saliva?</summary><p>É uma análise que ajuda a entender o risco de cárie e outros problemas, permitindo uma prevenção personalizada para você.</p></details>
+      <details><summary>Vocês atendem convênio?</summary><p>[INFORMAR CONVÊNIOS / FORMAS DE PAGAMENTO]</p></details>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="oh-contact" id="oh-contato">
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <h2 class="oh-h2">Seu próximo cuidado com o sorriso <em>está aqui.</em></h2>
+      <a class="oh-cta" style="align-self:flex-start" href="https://linkme.bio/draantoneliaguedes">Agendar pelo WhatsApp</a>
+    </div>
+    <div class="oh-info">
+      <div><small>Endereço</small>[RUA, NÚMERO] — Taboão da Serra, SP</div>
+      <div><small>Horários</small>[DIAS E HORÁRIOS]</div>
+      <div><small>WhatsApp</small>[NÚMERO]</div>
+    </div>
+  </section>
+
+  <div class="oh-foot">
+    <span>Odontologia Humanizada · Dra. Antonelia Guedes · CRO 85093</span>
+    <a href="https://www.instagram.com/clinicaodontohumanizada_">@clinicaodontohumanizada_</a>
+  </div>
+
+</div>
+
+</body></html>
